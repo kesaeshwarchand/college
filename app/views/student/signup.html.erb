@@ -1,0 +1,39 @@
+<h1><center><u>STUDENT REGISTRATION</u></h1>
+
+<%= form_tag do -%>
+<pre>Enter Your First Name   : <%= text_field_tag 'Fn', nil, placeholder: 'Your First Name', maxlength: 15 -%> </pre>
+<pre>Enter Your Last Name    : <%= text_field_tag 'Ln', nil, placeholder: 'Your Last Name', maxlength: 15 -%> </pre>
+<pre>Age                     : <%= number_field_tag 'Age', nil, in: 14..100 -%> </pre>
+<pre>Gender                  : <%= radio_button_tag 'gender', 'male' -%> male </pre>
+<pre> 	                  <%= radio_button_tag 'gender', 'female' -%> female </pre>
+<pre>Email                   : <%= email_field_tag 'email',nil, placeholder: 'email@gmail.com' -%> </pre>
+<pre>Phone Number            : <%= telephone_field_tag 'tel',nil, placeholder: '9999999999' -%> </pre>
+<pre>Address                 : <%= text_area_tag 'Address', nil, size: "50x3" -%> </pre>
+
+<pre>		<%= submit_tag "Save and Proceed" -%> </pre>
+<% end -%>
+
+
+
+
+<body>
+<div style="color: red">
+	<u> YOUR DETAILS ARE </u>
+<br/>
+	First Name is :<%= @fn -%>
+<br/>
+	Last Name is  :<%= @ln -%>
+<br/>
+	Age is        : <%= @age -%>
+<br/>
+	You are       :<%= @gen -%>
+<br/>
+	Email is      :<%= @email -%>
+<br/>
+	Phone number  is : <%= @phno -%>
+<br/>
+	Address is    :<%= @addr -%>
+</div>
+<pre>		<%= submit_tag "Confirm and print" -%> </pre>
+
+</body>
